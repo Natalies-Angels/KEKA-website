@@ -1,4 +1,3 @@
-// LoadingPage.js
 import React, { useState, useEffect } from 'react';
 import './LoadingPageStyle.css'; // Make sure to import your CSS file
 
@@ -13,7 +12,6 @@ const LoadingPage = () => {
     'We\'ll style it too ',
     'with love, ',
     'ICT crew <3'
-    
   ];
 
   useEffect(() => {
@@ -32,7 +30,7 @@ const LoadingPage = () => {
       clearInterval(textInterval);
       clearTimeout(navigationTimeout);
     };
-  }, []);
+  }, [loadingTexts]); // Include loadingTexts in the dependency array
 
   return (
     <div className="loader-container">

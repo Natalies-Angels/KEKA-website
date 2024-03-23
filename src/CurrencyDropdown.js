@@ -4,7 +4,7 @@ import { useCurrency } from './CurrencyContext';
 
 const CurrencyDropdown = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const { selectedCurrency, updateCurrency } = useCurrency();
+  const { updateCurrency } = useCurrency(); // Remove selectedCurrency since it's not being used
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);

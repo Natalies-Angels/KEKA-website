@@ -7,10 +7,10 @@ const Footer = () => {
     return (
         <footer className="footer-container">
             <div className="footer-links">
-                <a href="#">CONTACT</a>
-                <a href="#">RUG CARE</a>
-                <a href="#">FAQ</a>
-                <a href="#">STOCKISTS</a>
+                <a href="/">CONTACT</a>
+                <a href="/">RUG CARE</a>
+                <a href="/">FAQ</a>
+                <a href="/">STOCKISTS</a>
             </div>
             <p className="copyright">copyright ©2024, turubai studios & collective</p>
             {/* <div className="footer-form">

@@ -58,9 +58,6 @@ const Nav = () => {
                     all products
                   </a>
                 </li>
-                <li>
-                  
-                </li>
               </ul>
             </li>
             <li className="nav-item">
@@ -68,9 +65,6 @@ const Nav = () => {
                 checkout
               </a>
             </li>
-
-          
-          
           </ul>
         </div>
       </div>
