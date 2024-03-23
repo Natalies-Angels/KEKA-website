@@ -110,7 +110,7 @@ const LandingPage = () => {
 
             <div className="landingpage-additional-card-section">
                 <div className="landingpage-additional-card-image">
-                    <img src="/All 3.png" alt="Additional Image" />
+                    <img src="/All 3.png" alt="about-series" />
                 </div>
     
                 <div className="landingpage-additional-card-content">

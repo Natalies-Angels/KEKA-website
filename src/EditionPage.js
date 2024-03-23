@@ -19,7 +19,7 @@ const EditionPage = () => {
         <div className="cta-overlay">
           <h2 className="edition-name">SERIES NAME</h2>
         </div>
-        <img src="/TLXArtboard 1 copy 25000 x 3500.jpg" alt="Additional Image" />
+        <img src="/TLXArtboard 1 copy 25000 x 3500.jpg" alt="series" />
       </div>
       <div className="edition-card-section" id="jicho">
         <div className="edition-card">
