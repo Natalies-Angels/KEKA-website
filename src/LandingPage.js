@@ -117,11 +117,10 @@ const LandingPage = () => {
                     <h2>The Do Good Series</h2>
                     <p>In the enchanting realm of KEKA's tufted tapestries, the 'Do Good' series unfolds as a captivating trilogy, comprising three editions: 'Jicho,' 'Domo,' and 'Skio.' Each edition converges to weave an interconnected tale.</p>
                 <button type="button" className="btn btn-primary">Learn Moreart</button>
-            </div>           
-</div>
-          
+            </div>
         </div>
-    );
+    </div>
+);
 }
 
 export default LandingPage;
