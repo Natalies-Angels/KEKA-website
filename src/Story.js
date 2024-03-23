@@ -11,7 +11,7 @@ const Story = () => {
             <div className="story-card-section">
                 <div className="story-card">
                     <div className="story-card-image">
-                        <img src="/1.png" alt="Story Image" />
+                        <img src="/1.png" alt="Story Image1" />
                     </div>
                 </div>
                 <div className="story-card-content">
@@ -54,7 +54,7 @@ const Story = () => {
                 </div>
                 <div className="story-card">
                     <div className="story-card-image">
-                        <img src="/Square Pillow Mockup.png" alt="Story Image" />
+                        <img src="/Square Pillow Mockup.png" alt="Story Image2" />
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ const Story = () => {
             <div className="story-card-section">
                 <div className="story-card">
                     <div className="story-card-image">
-                        <img src="/All 3.png" alt="Story Image" />
+                        <img src="/All 3.png" alt="Story Image3" />
                     </div>
                 </div>
                 <div className="story-card-content">

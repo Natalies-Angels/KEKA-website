@@ -16,7 +16,7 @@ const ProductsPage = () => {
             <div className="product-card-section">
                 <div className="product-card">
                     <div className="product-card-image">
-                        <img src="/1.png" alt="Additional Image" />
+                        <img src="/1.png" alt="product-image" />
                     </div>
                 </div>
 

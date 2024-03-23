@@ -19,18 +19,20 @@ const LoadingPage = () => {
     const textInterval = setInterval(() => {
       setLoadingTextIndex((prevIndex) => (prevIndex + 1) % loadingTexts.length);
     }, 3000);
-
+  
     // Navigate to CustomizationPage after 15 seconds
     const navigationTimeout = setTimeout(() => {
       window.location.href = '/CustomizationPage'; // Redirect to CustomizationPage
     }, 18000);
-
+  
     // Clear interval on component unmount
     return () => {
       clearInterval(textInterval);
       clearTimeout(navigationTimeout);
     };
-  }, [loadingTexts]); // Include loadingTexts in the dependency array
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  
 
   return (
     <div className="loader-container">

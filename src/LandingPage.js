@@ -76,7 +76,7 @@ const LandingPage = () => {
             <div className="category-container" id="category-section">
 
                 <Link to="/floor-rugs" className="card">
-                    <img src="/TLXArtboard 1 copy 25000 x 3500.jpg" alt="Floor Rugs" />
+                    <img src="/TLXArtboard 1 copy 25000 x 3500.jpg" alt="explo-prod" />
                     <div className={`overlay ${showText[0] ? 'visible' : ''}`}>
                         <h3>Floor Rugs</h3>
                         {showButton && <button type="button" className="btn btn-primary">explore our products</button>}
@@ -84,7 +84,7 @@ const LandingPage = () => {
                 </Link>
 
                 <Link to="/buildYourKEKA" className="card">
-                    <img src="/wallHangings.jpg" alt="Wall Hangings" />
+                    <img src="/wallHangings.jpg" alt="build-KEKA" />
                     <div className={`overlay ${showText[1] ? 'visible' : ''}`}>
                         <h3>Wall Hangings</h3>
                         {showButton && <button type="button" className="btn btn-primary">build your KEKA</button>}
@@ -92,7 +92,7 @@ const LandingPage = () => {
                 </Link>
 
                 <Link to="/exploreseries" className="card">
-                    <img src="/TLXArtboard 1 copy5000 x 3500.jpg" alt="Cushions" />
+                    <img src="/TLXArtboard 1 copy5000 x 3500.jpg" alt="explo-ser" />
                     <div className={`overlay ${showText[2] ? 'visible' : ''}`}>
                         <h3>Cushions</h3>
                         {showButton && <button type="button" className="btn btn-primary">explore series</button>}
@@ -100,7 +100,7 @@ const LandingPage = () => {
                 </Link>
 
                 <Link to="/cushions" className="card">
-                    <img src="/wallHangings.jpg" alt="Cushions" />
+                    <img src="/wallHangings.jpg" alt="disc-sust" />
                     <div className={`overlay ${showText[3] ? 'visible' : ''}`}>
                         <h3>Cushions</h3>
                         {showButton && <button type="button" className="btn btn-primary">discover our sustainability</button>}
