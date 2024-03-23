@@ -1,0 +1,56 @@
+.product-card-section {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+}
+
+.product-card {
+    width: 60%;
+    display: flex;
+    justify-content: center; /* Center the content inside product-card */
+}
+
+.product-card-image img {
+    width: 1000px;
+    height: 800px; /* Maintain aspect ratio */
+}
+
+.product-card-content {
+    width: 40%;
+    padding: 0;
+}
+
+.product-card-content form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.product-card-content form label {
+    margin-bottom: 10px;
+}
+
+.product-card-content form select,
+.product-card-content form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.product-card-content form button {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.product-card-content form button:hover {
+    background-color: black;
+    color: white;
+}
+p
+{
+    text-align: justify;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}

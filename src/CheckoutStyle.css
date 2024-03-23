@@ -1,0 +1,74 @@
+/* CheckoutStyle.css */
+.container {
+    margin-top: 140px;
+}
+
+.section-number {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    font-size: smaller;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+h3 {
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.card.mb-3::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #dee2e6;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bordered-div {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-top: 80px;
+    height: auto;
+    margin-left: 40px;
+}
+.bordered-div h3{
+    text-align: center;
+}
+.card {
+    border: none;
+    box-shadow: none;
+}
+
+.card:hover {
+    transform: none;
+    box-shadow: none;
+    transition: none; /* Remove the transition property */
+}
+#city,
+#streetName {
+    width: 100%; /* Set the width as needed */
+}
+
+/* Adjust the spacing between the fields if necessary */
+.row .col-md-8,
+.row .col-md-4 {
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+.top {
+    width: 100%;
+}

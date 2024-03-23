@@ -1,0 +1,79 @@
+/* floorRugsPageStyle.css */
+
+.floor-rugs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 120px;
+}
+
+.floor-rug-card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+  overflow: hidden; /* Ensure the overlay doesn't overflow */
+}
+
+.floor-rug-card img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s; /* Add transition for smoother hover effect */
+  position: relative;
+}
+
+/* Overlay styles */
+.floor-rug-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px; /* Set a fixed height for the overlay */
+  background: linear-gradient(to top, rgba(134, 107, 107, 0.8) 0%, transparent 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.floor-rug-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Text in the overlay */
+.floor-rug-card .overlay p {
+  font-size: 18px;
+  margin: 0;
+  color: white; /* Set font color to white */
+}
+
+.floor-rug-card .overlay h4 {
+  font-weight: bold;
+}
+
+.floor-rug-card h4 {
+  margin: 10px 0;
+  font-weight: 800;
+  font-size: medium;
+  color: black; /* Adjust font color as needed */
+}
+
+.floor-rug-card p {
+  color: #666;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.floor-rug-card button:hover {
+  background-color: lemonchiffon;
+}
+.floor-rugs-content
+{
+  margin-top: 150px;
+}

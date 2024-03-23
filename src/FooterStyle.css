@@ -1,0 +1,62 @@
+.footer-container {
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around; /* Spread links horizontally with space around them */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: rgb(46, 45, 45);
+    font-weight: lighter;
+}
+
+.footer-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+.footer form {
+    display: flex;
+    justify-content: center; 
+}
+
+.footer label {
+    margin-right: 10px; /* Add space between labels and inputs */
+}
+
+.footer input {
+    padding: 8px;
+    margin-right: 10px; /* Add space between input fields */
+    border: 1px solid #ccc;
+}
+
+.footer button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.copyright
+{
+    padding-top: 50px;
+    color: #555;
+    font-weight: lighter;
+    text-align: center;
+}
+

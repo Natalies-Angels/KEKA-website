@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .custom-btn {
+    color: white;
+    background-color: grey;
+    }
+
+  .custom-btn:hover {
+    color: white;
+    background-color: black;
+  }
+  .pt-4 {
+    margin-top: 4rem; /* Adjust the value as needed */
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+        <!-- Navbar Links on the Left -->
+        <div class="d-flex justify-content-start">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        about us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="#">our story</a></li>
+                        <li><a class="dropdown-item" href="missionPage.html">our mission</a></li>
+                        <li><a class="dropdown-item" href="visionPage.html">our vision</a></li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Centered Logo -->
+        <a class="logo mx-auto" href="index.html">
+            <img src="" alt="Logo" class="d-inline-block align-top">
+        </a>
+
+        <!-- Navbar Links on the Right -->
+        <div class="d-flex justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        our products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="#">our collections</a></li>
+                        <li><a class="dropdown-item" href="#">our editions</a></li>
+                        <li><a class="dropdown-item" href="#">early access</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">cart</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="checkout.html">checkout</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-5 pt-4">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Customize Your Order</h2>
+      <a href="your_page_url" target="_blank">Click me</a>
+
+      <div class="form-group">
+        <label for="product-type">Product Type:</label>
+        <select id="product-type" class="form-control">
+            <option value="wall-hangings" data-toggle="tooltip"  data-placement="right">Wall Hangings</option>
+            <option value="carpet" data-toggle="tooltip"  data-placement="right">Carpet</option>
+            <option value="cushion-size" data-toggle="tooltip"  data-placement="right">Cushion Size</option>
+        </select>
+      </div>    
+      <div class="form-group">
+        <label for="rug-size">Rug Size:</label>
+        <select id="rug-size" class="form-control">
+            <option value="0.5*0.5" data-toggle="tooltip" data-placement="right">0.5*0.5</option>
+            <option value="0.5*1" data-toggle="tooltip" data-placement="right">0.5*1</option>
+            <option value="0.5*2" data-toggle="tooltip" data-placement="right">0.5*2</option>
+            <option value="1*1" data-toggle="tooltip" data-placement="right">1*1</option>
+            <option value="1*2" data-toggle="tooltip" data-placement="right">1*2</option>
+            <option value="2*1" data-toggle="tooltip" data-placement="right">2*1</option>
+            <option value="2*2" data-toggle="tooltip" data-placement="right">2*2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="rug-material">Rug Material:</label>
+        <select id="rug-material" class="form-control">
+          <option value="wool">Wool</option>
+          <option value="cotton">Cotton</option>
+        </select>
+      </div>
+      <!-- <div class="form-group">
+        <label for="rug-color">Color:</label>
+        <select id="rug-color" class="form-control">
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
+            <option value="pink">Pink</option>
+        </select>
+      </div>     -->
+      <div class="btn-group">
+        <button class="btn custom-btn" onclick="addToCart()">Add to Cart</button>
+        <button class="btn mx-2 custom-btn" onclick="clearCart()">Clear Cart</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>Shopping Cart</h2>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <h4>Total: <span id="total">$0.00</span></h4>
+        </div>
+      </div>
+      <div id="cart-items">
+        <!-- Cart items will be displayed here -->
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  
+  // Function to get cart data from localStorage
+  function getCartFromStorage() {
+    const cartData = localStorage.getItem('cartItems');
+    return cartData ? JSON.parse(cartData) : [];
+  }
+
+  let cartItems = getCartFromStorage();
+
+  // Function to save cart data to localStorage
+  function saveCartToStorage() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }
+
+  function addToCart() {
+    const productType = document.getElementById('product-type').value;
+    const rugSize = document.getElementById('rug-size').value;
+    const rugMaterial = document.getElementById('rug-material').value;
+    const color = document.getElementById('rug-color').value;
+    const item = {
+      productType,
+      rugSize,
+      rugMaterial,
+      color,
+      price: calculatePrice(productType, rugSize, rugMaterial, color)
+    };
+    cartItems.push(item);
+    saveCartToStorage();
+    renderCart();
+  }
+
+  function renderCart() {
+  const cartItemsElement = document.getElementById('cart-items');
+  cartItemsElement.innerHTML = '';
+
+  // Check if cartItems is empty
+  if (cartItems.length === 0) {
+    cartItemsElement.innerHTML = '<p>No items in the cart</p>';
+    updateTotal(); // Ensure total is updated even if cart is empty
+    return;
+  }
+
+  // If cartItems is not empty, populate with items
+  cartItems.forEach((item, index) => {
+    cartItemsElement.innerHTML += `
+      <div class="card mb-2">
+        <div class="card-body">
+          <p>Rug Image: Image of the Rug</p>
+          <p>Product Type: ${item.productType}</p>
+          <p>Rug Size: ${item.rugSize}</p>
+          <p>Rug Material: ${item.rugMaterial}</p>
+          <p>Color: ${item.color}</p>
+          <p>Price: $${item.price.toFixed(2)}</p>
+          <button class="btn custom-btn" onclick="removeFromCart(${index})">Remove</button>
+        </div>
+      </div>
+    `;
+  });
+
+  updateTotal(); // Update total price
+}
+
+  function removeFromCart(index) {
+    cartItems.splice(index, 1);
+    saveCartToStorage();
+    renderCart();
+  }
+
+  function clearCart() {
+    cartItems = [];
+    saveCartToStorage();
+    renderCart();
+  }
+
+  function updateTotal() {
+    const totalElement = document.getElementById('total');
+    const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+    totalElement.textContent = `$${total.toFixed(2)}`;
+  }
+
+  function calculatePrice(productType, rugSize, rugMaterial, color) {
+    let price = 0;
+    // Add pricing logic based on product type, rug size, rug material, and color
+    // Example pricing logic:
+    if (productType === 'wall-hangings') {
+      price += 50;
+    } else if (productType === 'carpet') {
+      price += 100;
+    } else if (productType === 'cushion-size') {
+      price += 75;
+    }
+    if (rugSize === '0.5*0.5') {
+      price += 20;
+    } else if (rugSize === '0.5*1') {
+      price += 30;
+    } else if (rugSize === '1*1') {
+      price += 40;
+    }
+    if (rugMaterial === 'wool') {
+      price += 50;
+    } else if (rugMaterial === 'cotton') {
+      price += 30;
+    }
+    if (color === 'blue') {
+      price += 10;
+    } else if (color === 'red') {
+      price += 15;
+    } else if (color === 'green') {
+      price += 12;
+    }
+    return price;
+  }
+
+  // Render cart items when the page is loaded
+  window.onload = renderCart;
+</script>
+
+  
+
+</body>
+</html>

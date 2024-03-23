@@ -1,0 +1,138 @@
+.landing-page-body {
+    padding: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+}
+
+.full-screen-content {
+    color: black;
+    text-align: center;
+}
+
+.landingpage-cta-container {
+    height: 90vh;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+hr.line {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    padding: 0;
+    width: calc(100% + 80px); /* Adjust the width based on double the padding */
+    margin-left: -40px; /* Adjust the margin to center the line */
+    box-sizing: content-box; /* Ensure the width includes padding but not border/margin */
+}
+
+label {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.landing-page-body .category-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 60px;
+    margin-bottom: 150px;
+}
+
+.landingpage-additional-card-section {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+.landingpage-additional-card {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Adjust the width based on your design */
+    height: 100%; /* Adjust the height based on your design */
+    border: none;
+}
+
+.landingpage-additional-card-image{
+    width: 150%;
+}
+
+.landingpage-additional-card-image img {
+   width: 130%;
+   height: auto;
+   object-fit: cover;
+}
+
+.landingpage-additional-card-content {
+   flex: content;
+    padding: 50px; /* Adjust padding as needed */
+}
+
+.landing-page-copy {
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: 120px;
+}
+
+.category-container .card {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Adjust the width based on your design */
+    height: 100%; /* Adjust the height based on your design */
+    border: 1px solid #ccc; /* Add a border to the cards */
+}
+.category-container .card img {
+    transition: none !important; /* Remove any transition effect */
+    transform: none !important; /* Remove any transform effect */
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Added smooth transition */
+}
+
+.overlay.visible {
+    opacity: 1;
+}
+
+.overlay button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay.visible button {
+    opacity: 1;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin-bottom: 0; /* Remove default margin */
+}

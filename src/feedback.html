@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .custom-btn {
+      color: white;
+      background-color: grey;
+    }
+
+    .custom-btn:hover {
+      color: white;
+      background-color: black;
+    }
+
+    .pt-4 {
+      margin-top: 4rem;
+    }
+
+    .feedback-container {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+
+    .feedback-response {
+      margin-bottom: 10px;
+    }
+    .response {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc; /* Add bottom border */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <!-- Navbar Links on the Left -->
+      <div class="d-flex justify-content-start">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              about us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#">our story</a></li>
+              <li><a class="dropdown-item" href="missionPage.html">our mission</a></li>
+              <li><a class="dropdown-item" href="visionPage.html">our vision</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- Centered Logo -->
+      <a class="logo mx-auto" href="index.html">
+        <img src="" alt="Logo" class="d-inline-block align-top">
+      </a>
+
+      <!-- Navbar Links on the Right -->
+      <div class="d-flex justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              our products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="#">our collections</a></li>
+              <li><a class="dropdown-item" href="#">our editions</a></li>
+              <li><a class="dropdown-item" href="#">early access</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">cart</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5 pt-4">
+    <h2>Feedback</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="image-id">Image ID:</label>
+            <input type="text" class="form-control" id="image-id" placeholder="Auto-generated - It will display the image selected" disabled>
+          </div>
+          <div class="form-group">
+            <label for="user">User:</label>
+            <input type="text" class="form-control" id="user" placeholder="Enter your name - It will display your user name.">
+          </div>
+          <div class="form-group">
+            <label for="feedback">Feedback:</label>
+            <textarea class="form-control" id="feedback" rows="5" placeholder="Enter your feedback"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating:</label>
+            <select class="form-control" id="rating">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <button type="submit" class="btn custom-btn">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="feedback-container">
+          <h3>Feedback Responses</h3>
+          <ul id="feedbackList" class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Generate a random image ID (for demonstration purposes)
+      const imageId = Math.floor(Math.random() * 1000) + 1;
+      const user = document.getElementById('user').value;
+      const feedback = document.getElementById('feedback').value;
+      const rating = document.getElementById('rating').value;
+
+      const listItem = document.createElement('li');
+      listItem.className = 'list-group-item feedback-response';
+      listItem.innerHTML = `
+        <strong>Image ID:</strong> ${imageId}<br>
+        <strong>User:</strong> ${user}<br>
+        <strong>Feedback:</strong> ${feedback}<br>
+        <strong>Rating:</strong> ${rating}
+        <button type="button" class="btn custom-btn btn-sm float-right delete-feedback">Delete</button>
+      `;
+
+      document.getElementById('feedbackList').appendChild(listItem);
+
+      // Clear form fields after submission
+      document.getElementById('user').value = '';
+      document.getElementById('feedback').value = '';
+      document.getElementById('rating').value = '1';
+    });
+
+    // Event delegation for delete functionality
+    document.getElementById('feedbackList').addEventListener('click', function(event) {
+      if (event.target.classList.contains('delete-feedback')) {
+        event.target.parentElement.remove();
+      }
+    });
+  </script>
+</body>
+</html>

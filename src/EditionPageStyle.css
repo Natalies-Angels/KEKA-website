@@ -1,0 +1,125 @@
+.edition-cta-container {
+  text-align: center;
+  margin-bottom: 300px;
+  margin-top: 400px;
+}
+
+.edition-card-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.edition-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.edition-card-image {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.edition-card img {
+  width: 800px;
+  height: auto;
+}
+
+.edition-card-content {
+  width: 60%; /* Adjust the width as needed */
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.edition-card-content form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.edition-card-content form label {
+  margin-bottom: 10px;
+}
+
+.edition-card-content form select,
+.edition-card-content form button {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.edition-card-content form button {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.edition-card-content form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.edition-btn {
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 8px;
+}
+.additional-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.additional-card-section {
+  margin-bottom: 100px;
+  margin-top: 0;
+}
+
+.edition-cta-container {
+  margin-top: 80px;
+  margin-bottom: 0;
+  height: auto;
+  padding: 10px;
+  position: relative; /* Position relative for absolute positioning of overlay */
+}
+
+.edition-cta-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 150px;
+}
+
+.cta-overlay {
+  position: absolute;
+  top: 15%; /* Align to the top edge */
+  left: 5%;
+  transform: translate(-50%, 0) rotate(-90deg); /* Rotate -90 degrees */
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.cta-overlay h2 {
+  margin-bottom: 10px;
+  margin-left: 40%;
+  font-weight: lighter;
+  font-size: xxx-large;
+  word-spacing: 20px;
+}
+
+.cta-overlay .edition-name {
+  display: block;
+  writing-mode: vertical-rl; /* Vertical writing mode */
+  transform: rotate(-90deg) translateX(-80%); /* Rotate the text and translate horizontally */
+}
+
+.content {
+  padding: 40px;
+}

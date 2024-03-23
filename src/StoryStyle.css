@@ -1,0 +1,70 @@
+.story-cta-container {
+    text-align: center;
+    margin-bottom: 300px;
+    margin-top: 400px;
+}
+
+.story-card-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.story-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.story-card-image {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.story-card img {
+    width: 800px;
+    height: auto;
+}
+
+.story-card-content {
+    width: 60%; /* Adjust the width as needed */
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.story-card-content form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.story-card-content form label {
+    margin-bottom: 10px;
+}
+
+.story-card-content form select,
+.story-card-content form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.story-card-content form button {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.story-card-content form button:hover {
+    background-color: black;
+    color: white;
+}
+.story-btn
+{
+    background: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 8px;
+} 

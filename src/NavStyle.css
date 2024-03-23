@@ -1,0 +1,9 @@
+.nav-logo img {
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+}
+
+/* Add this to your existing CSS */
+.navbar-nav .nav-item {
+    margin-right: 25px; /* Adjust the margin-right as needed */
+}
