@@ -12,7 +12,7 @@ import WallHangingsPage from './WallHangingsPage';
 import FloorRugsPage from './FloorRugsPage';
 import CushionsPage from './CushionsPage';
 import Story from './Story';
-import TSClandingPage from './TSClandingPage';
+// import TSClandingPage from './TSClandingPage';
 import FAQ from './FAQ';
 import ProductsPage from './ProductsPage';
 import EditionPage from './EditionPage';
