@@ -1,5 +1,7 @@
 .landing-page-body {
     padding: 40px;
+    font-family: serif;
+    font-size: larger;
 }
 
 .navbar-nav .nav-link {

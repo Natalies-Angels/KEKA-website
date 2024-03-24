@@ -57,8 +57,9 @@ const LandingPage = () => {
         <div className="landing-page-body">
             <div className="landingpage-cta-container">
                 <div className="full-screen-content text-center">
-                    <h2>Image/Video goes here</h2>
-                    <p>Discover luxury & individuality at KEKA. Create your perfect rug with our unique customization process. 
+                    <h2>Image/Video goes here</h2><br />
+                    <p>Discover luxury & individuality at KEKA. <br/>
+                       Create your perfect rug with our unique customization process. 
                        Watch our video & start crafting your masterpiece today.
                     </p>
                     <button type="button" className="btn btn-primary btn-lg">build your KEKA</button>
@@ -66,7 +67,7 @@ const LandingPage = () => {
             </div>
 
             <div className="landing-page-copy">
-                <h4>Welcome to KEKA: Where Luxury Meets Customization</h4>
+                <h4>Welcome to KEKA: Where Luxury Meets Customization</h4><br/>
                 <p>
                     At KEKA, we believe that every space deserves a touch of luxury and individuality. That's why we offer a unique design customization process that allows you to create a rug that perfectly reflects your style and vision.
                     Your Unique Masterpiece Awaits: Discover the joy of owning a truly unique masterpiece with KEKA. Watch our video below to learn more about our design customization process and start creating the rug of your dreams today.
@@ -116,7 +117,7 @@ const LandingPage = () => {
                 <div className="landingpage-additional-card-content">
                     <h2>The Do Good Series</h2>
                     <p>In the enchanting realm of KEKA's tufted tapestries, the 'Do Good' series unfolds as a captivating trilogy, comprising three editions: 'Jicho,' 'Domo,' and 'Skio.' Each edition converges to weave an interconnected tale.</p>
-                <button type="button" className="btn btn-primary">Learn Moreart</button>
+                <button type="button" className="btn btn-primary">Learn More</button>
             </div>
         </div>
     </div>

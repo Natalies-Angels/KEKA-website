@@ -32,7 +32,7 @@ const EditionPage = () => {
             <p>
               Bearing the Swahili proverb, "Macho hayana pazia," translating to "Eyes have no curtain," 'Jicho' invites you to witness the serenity of a sunset. With seven sets, each comprising three pieces, this edition encapsulates the beauty of dusk in the eye's delicate tufting. These carpets embody the hushed whispers of nature, urging you to see the world not just with your eyes but with your soul{' '}
               <span className="edition-price-link">
-                <Link to="/faq">Why our prices?</Link>
+                <Link to="/WhoWeAre">Why our prices?</Link>
               </span>
             </p>
           </div>

@@ -72,11 +72,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border: 2px solid black;
 }
 
 .additional-card-section {
   margin-bottom: 100px;
   margin-top: 0;
+  
 }
 
 .edition-cta-container {
